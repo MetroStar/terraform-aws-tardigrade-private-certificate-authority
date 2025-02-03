@@ -1,5 +1,5 @@
 module "s3_bucket" {
-  source = "git::https://github.com/plus3it/terraform-aws-tardigrade-s3-bucket.git?ref=5.0.0"
+  source = "git::https://github.com/MetroStar/terraform-aws-tardigrade-s3-bucket.git?ref=5.0.0"
   count  = var.private_certificate_authority.acmpca_certificate_authority.revocation_configuration.crl_configuration != null ? 1 : 0
 
   bucket        = var.private_certificate_authority.s3_bucket.bucket
